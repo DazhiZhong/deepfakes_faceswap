@@ -1,14 +1,19 @@
-# deepfakes_faceswap
-This is the code from [deepfakes' faceswap project](https://www.reddit.com/user/deepfakes/).
-Hope we can improve it together, HAVE FUN!
+# Faceswap Adversarial Attack
+⚠️ This project is a forked version of [this repo](https://github.com/joshua-wu/deepfakes_faceswap)! Please go there for the original code.
 
-Message from deepfakes:
+![examples faceswap singular small](README/examples%20faceswap%20singular%20small.png)
 
-**Whole project with training images and trained model (~300MB):**  
-anonfile.com/p7w3m0d5be/face-swap.zip or [click here to download](anonfile.com/p7w3m0d5be/face-swap.zip)
+In our paper, we propose AI-FGSM, a method for transferable adversarial attack for a wide range of models. We experiment of three deep neural networks consisting of image translation and image classification networks. This is our third experiment, which is done on face swapping networks. See our previous work at  [this repo](https://github.com/DazhiZhong/disrupting-deepfakes) (StarGAN) and [this repo](https://github.com/jasonliuuu/SI-AI-FGSM) (Inception models).
 
-**Source code only:**  
-anonfile.com/f6wbmfd2b2/face-swap-code.zip or [click here to download](anonfile.com/f6wbmfd2b2/face-swap-code.zip)
+![examples truepcas](README/examples%20truepcas.png)
+
+Fig 2: randomly chosen attacked images and their reference images.
+
+
+
+Google Drive shared file for the entire repo, training data, and trained models: https://drive.google.com/file/d/1-2bNmny7Xlo818mqPCysw54C09FEyp4f/view?usp=sharing
+
+
 
 **Requirements:**
 
@@ -17,18 +22,8 @@ anonfile.com/f6wbmfd2b2/face-swap-code.zip or [click here to download](anonfile.
     Tensorflow 1.3+(?)
     Keras 2
 
-you also need a modern GPU with CUDA support for best performance
-
 **How to run:**
 
-    python train.py
+    python attack.py
 
-As you can see, the code is embarrassingly simple. I don't think it's worth the trouble to keep it secret from everyone.
-I believe the community are smart enough to finish the rest of the owl.
-
-If there is any question, welcome to discuss here.
-
-**Some tips:**
-
-Reuse existing models will train much faster than start from nothing.  
-If there are not enough training data, start with someone looks similar, then switch the data.
+Alternatively, use the jupyter notebook in the files, or colab notebook [here](https://colab.research.google.com/drive/1Ru4lY-WuH5V0LdxBh4YwvJe8qeclSKko?usp=sharing)
